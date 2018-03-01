@@ -1,0 +1,43 @@
+# For more information about the configurations used in this file, please
+# see the Travis CI documentation: https://docs.travis-ci.com
+
+language: python
+sudo: false
+python:
+- '3.6.4'
+
+addons:
+  postgresql: "9.5"
+  apt:
+    packages:
+      - postgresql-9.5-postgis-2.3
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
+
+install:
+  - pip install ansible
+  - pip install -r requirements/development.txt
+  - nvm install v6.3.0
+  - npm install -g npm
+  - npm install
+
+before_script:
+- export DATABASE_URL=postgres://postgres@localhost/essentia
+- psql -c "CREATE DATABASE essentia;" -U postgres
+- touch webpack-stats.json
+
+script:
+- flake8
+- ./node_modules/.bin/webpack --config essentia/static/webpack.prod.config.js
+- py.test --cov -v --tb=native
+- ansible-playbook -i provisioner/hosts provisioner/site.yml --syntax-check
+
+notifications:
+  email:
+    on_success: change  # [always|never|change]
+    on_failure: always  # [always|never|change]

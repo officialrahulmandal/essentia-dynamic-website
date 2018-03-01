@@ -1,0 +1,7 @@
+---
+project_name: essentia
+project_repo_url: git@github.com:essentia/essentia-web.git
+project_repo_remote: origin
+repo_version: master
+pg_gis: False
+webpack_enabled: True

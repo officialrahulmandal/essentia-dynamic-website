@@ -1,0 +1,20 @@
+---
+- name: make sure webpack stats file exists
+  file:
+    path: "{{ project_path }}/webpack-stats.json"
+    state: touch
+    owner: "{{user}}"
+    group: "{{uwsgi_group}}"
+
+- name: Run build webpack
+  command: {{ webpack_path }} --config {{ webpack_config }} --progress --colors
+  become: false
+  tags: ['deploy']
+  args:
+   chdir: "{{ project_path }}"
+
+- name: collect static
+  django_manage: command="collectstatic -i js -i css -i server.js -i webpack.base.config.js -i webpack.dev.config.js -i webpack.prod.config.js" app_path={{ project_path }} virtualenv={{ venv_path }}
+  become: false
+  tags: ['deploy']
+
