@@ -16,6 +16,7 @@ module.exports = {
   ], // add all common plugins here
 
   module: {
+    devtool: "source-map",
     loaders: [
       {
           test: /\.css$/,
@@ -28,14 +29,6 @@ module.exports = {
       {
           test: /\.scss/,
           loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
-      },
-      {
-          test: /\.less/,
-          loader: 'style-loader!css-loader!postcss-loader!less-loader'
-      },
-      {
-          test: /\.styl/,
-          loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
       },
       {
           test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/,

@@ -25,3 +25,4 @@ pytest-mock==1.6.3
 # Versioning
 # -------------------------------------
 bumpversion==0.5.3
+fabric3==1.14.post1

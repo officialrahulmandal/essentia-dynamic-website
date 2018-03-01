@@ -22,6 +22,7 @@ config.plugins = config.plugins.concat([
 ])
 
 // Add a loader for JS files with react-hot enabled
+config.module.debug = true
 config.module.loaders.push(
   {
     test: /\.js?$/,

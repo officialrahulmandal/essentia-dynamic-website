@@ -1,3 +1,3 @@
 // Add your javascript code here.
-require("../css/normalize.css");
-require("../css/main.css");
+require("../css/normalize.scss");
+require("../css/main.scss");

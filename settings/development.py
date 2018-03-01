@@ -51,16 +51,6 @@ CACHES = {
 # ------------------------------------------------------------------------------
 INSTALLED_APPS += ('django_extensions', )
 
-# LiveReload Support with devrecargar
-# ------------------------------------------------------------------------------
-# https://github.com/scottwoodall/django-devrecargar
-INSTALLED_APPS += ('devrecargar',)
-
-DEVRECARGAR_PATHS_TO_WATCH = [{
-    'path': str(APPS_DIR),  # noqa: F405
-    'patterns': ['*.html', '*.js', '*.css', '*.scss'],
-}]
-
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
 MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]  # noqa: F405

@@ -101,7 +101,7 @@ def createapp(appname):
 
 
 def install_webpack_dependencies():
-    local('npm install')
+    local('yarn install')
 
 
 def build(options='--progress --colors'):
@@ -112,6 +112,7 @@ def build(options='--progress --colors'):
 
 def watch():
     local('node %s' % join(env.static_dir, 'server.js'))
+
 
 #  Enviroments & Deployments
 # ---------------------------------------------------------

@@ -7,7 +7,7 @@ backend + cms + frontend of essentia
 
 ## Getting up and running
 
-Minimum requirements: **pip, fabric, python3, node, npm  & [postgres][install-postgres]**, setup is tested on Mac OSX only.
+Minimum requirements: **pip, fabric, python3, node, npm, yarn  & [postgres][install-postgres]**, setup is tested on Mac OSX only.
 
 
 ```
@@ -28,6 +28,7 @@ Useful commands:
 - `fab serve` - start [django server](http://localhost:8000/)
 - `fab deploy_docs` - deploy docs to server
 - `fab test` - run the test locally with ipdb
+
 - `fab watch` - build dev staticfiles and start [node server](http://localhost:3000/)
 - `fab build` - build dev staticfiles
 - `fab prod build` - build production staticfiles

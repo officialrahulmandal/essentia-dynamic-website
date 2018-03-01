@@ -48,4 +48,4 @@ django-mail-templated==2.6.5
 
 # WEBPACK
 # -------------------------------------
-django-webpack-loader==0.3.3
+django-webpack-loader==0.6.0
