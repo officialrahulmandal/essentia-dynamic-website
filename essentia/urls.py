@@ -23,6 +23,9 @@ handler500 = base_views.server_error
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^services/$', TemplateView.as_view(template_name='pages/services.html'), name='services'),
+    url(r'^projects/$', TemplateView.as_view(template_name='pages/projects.html'), name='projects'),
+    url(r'^contact/$', TemplateView.as_view(template_name='pages/contact.html'), name='contact'),
     # Your stuff: custom urls go here
 ]
 
