@@ -1,0 +1,25 @@
+{%load staticfiles%}
+<footer class="footer">
+    <div class="footer__upper">
+        <div class="footer__upper--text">
+            <img src="{% static 'images/footer_img.png' %}">
+            <h2>Essentia Softserv</h2>
+        </div>
+        <div class="footer__upper--nav">
+          <a class="nav__link" href="{% url 'home' %}">HOME</a>
+          <a class="nav__link" href="{% url 'about' %}">ABOUT</a>
+          <a class="nav__link" href="{% url 'services' %}">SERVICES</a>
+          <a class="nav__link" href="{% url 'projects' %}">PROJECTS</a>
+          <a class="nav__link" href="{% url 'contact' %}">CONTACT</a>
+        </div>
+    </div>
+    <div class="footer__lower">
+        <div class="footer__lower__left">
+            <p>&copy; 2018 Essentia &#8226; <a href="https://www.iubenda.com/privacy-policy/8232799" title='Privacy Policy' target='blank'>Privacy</a></p>
+        </div>
+        <div class="footer__lower__center"></div>
+        <div class="footer__lower__right">
+            <p><a href="mailto:hello@essentiasoftserv.com">hello@essentiasoftserv.com</a></p>
+        </div>
+    </div>
+</footer>

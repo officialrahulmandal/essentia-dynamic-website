@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>map-marker</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="9.29577465" y="9.29577465" width="41.4084507" height="41.4084507"></rect>
+        <filter x="-1.2%" y="-1.2%" width="102.4%" height="104.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.863786139   0 0 0 0 0.863786139   0 0 0 0 0.863786139  0 0 0 0.5 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map-marker">
+            <g id="Rectangle" transform="translate(30.000000, 30.000000) rotate(45.000000) translate(-30.000000, -30.000000) ">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#E6E5E5" stroke-width="1" x="9.79577465" y="9.79577465" width="40.4084507" height="40.4084507"></rect>
+            </g>
+            <image id="Bitmap" x="17.7464789" y="20.2816901" width="24.5070423" height="20.2816901" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAwCAYAAABNPhkJAAAABGdBTUEAA1teXP8meAAAAwBJREFUaAXtmkFoE1EQhmd209SUYhFtQTwZoVb0JFgvgvGgSJoIFj1UQaRWG8Wz3r16KYJtbC1VREQPgiapgkJzEkQ8eShKBRWkoAhitdQm+8bZkBbaQ/q2bzZEeHvZhMx8M/+/2ex7Lw9B6EieL3S6ERhxiA6Ag1EhrBiGCIhhhYgIMTEVaWqazzGrExBFkNIQbgtZ815HApze9TtVESsBC5Oh4IGIYAcwE2afUmyvDOPGgnv683FCPCzVVGgcomLhdmraWLAbxUG+a405oQmtghXQmP/SqNHdJx9FEfFsldnAJ/oxN9362G/QSHB8S+wE//Z1NLDSSmuk4E6xeGjBWDASJhtdLAD9nFd0Y6lPo+ewIppwATbxQ73hBhq+QL4gHzyioZej6S9Lgu3ZOmAdsA5YB6wD1gHrQN0c0F6eSCSmNrR1zQ8pB3qRyGiEFkQdAc7kRnq6g+TUitVuvLXrz3VeqxqszDbquoxD22oJCPqZ1mxp/+nJjQ5Cf1C4SDzhXRFOFaIluKOt3Mfz3hbJwjosXmZUi7Q4qhOrG6MlGMg9pwsUjSPKP88e/yTJXFNwTya/h7/O+ySL6rI8gmHdWN24NQW7gAO6MNE4RR8L2dQLUSbDagr216zIgVPSRXV4CtRNjlM6sUFiagqOt8cSHNAeBCgRS0Rfv81FxiVYqxk1n8MlUp+bAV9xUvPqxLDe80Bj1ivBldf3k7/CqmG51gHrgHXAOmAdsA5YB+riwIolnlQm1+0iXObRzta6VA9cBBeo7F3LjR17Ezi1mrA8tDwy8HS762CR/3OLrXBhveSw8lznPaPXLXh58hBrilzyxYbVpxSXQE2asCqC/WkgQ86YgOqRy/usZnLZ9JRJrYrgHZtbev+HrQvg0Yj/N7exYF51HTSB1COXVf4tLbr3TGs5Ry8+2cm/ygdNQWHn83V9+Gwi+d20jhOFyAV/H6IpKOz8MtItiRoOEPVJgEJmvCsMp/yVF+ODt0ni2+rWWmOYNIDvW0WKZhV5V6XY/wBHpcAciWx2YQAAAABJRU5ErkJggg=="></image>
+        </g>
+    </g>
+</svg>

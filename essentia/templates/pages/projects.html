@@ -1,0 +1,44 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{%load staticfiles%}
+{% block title %}{% trans 'Projects' %} • {{ block.super }}{% endblock title %}
+{% block body_classes %}{{ block.super}} page-about {% endblock body_classes %}
+{% block content %}
+
+<section class="section hero" style="background-image: url({% static 'images/bg/bg__project.jpg' %}); ">
+    <div class="section-text">
+        <h1 style="color: #383838;">PROJECTS</h1>
+        <p style="color: #383838">We builds software so you can build better products.</p>
+    </div>
+</section>
+
+<!-- Project section -->
+<section class="container_white">
+    <div class="container_white-text">
+        <p>You can review some of the projects that were successfully implemented by Essentia Softserv. If you wish to recieve more detailed information on any of the provided examples or get quotation for your project, please feel free to contact us.</p>
+    </div>
+    <div class="container_white-project">
+        <h3>Some of our projects:</h3>
+        <div class="container_white-project--item" id="overlay">
+            <img src="{% static 'images/project/analytics_vidhya.png' %}" alt="">
+            <span><p>Analytics Vidhya</p></span>
+        </div>
+        <div class="container_white-project--item" id="overlay">
+            <img src="{% static 'images/project/raw_mango.png' %}" alt="">
+            <span><p>Raw Mango</p></span>
+        </div>
+        <div class="container_white-project--item" id="overlay">
+            <img src="{% static 'images/project/spoken_tutorial.png' %}" alt="">
+            <span><p>Spoken Tutorial</p></span>
+        </div>
+        <div class="container_white-project--item" id="overlay">
+            <img src="{% static 'images/project/ioda.png' %}" alt="">
+            <span><p>IODA</p></span>
+        </div>
+        <div class="container_white-project--item" id="overlay">
+            <img src="{% static 'images/project/juxt.png' %}" alt="">
+            <span><p>JUXT</p></span>
+        </div>
+    </div>
+</section>
+{% endblock content %}

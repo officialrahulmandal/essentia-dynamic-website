@@ -1,0 +1,7 @@
+.nav {
+    background-image: url('/img/navbar.jpg');
+
+    .page-home & {
+        background-image: none;
+    }
+}

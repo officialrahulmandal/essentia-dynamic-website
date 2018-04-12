@@ -1,0 +1,18 @@
+.social-callout-twitter {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+
+    &-logo {
+        background: url('../images/icons/twitter.png') 0 0 no-repeat;
+        background-size: 32px auto;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:hover {
+        .social-callout-twitter-logo {
+            background-image: url('../images/icons/twitter-white.png');
+        }
+    }
+}

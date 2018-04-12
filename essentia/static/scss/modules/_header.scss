@@ -1,0 +1,45 @@
+.nav {
+  background-image: url('/img/navbar.jpg');
+  text-align:center;
+  padding: em(40) em(15);
+  font-size: em(11);
+
+  .page-home & {
+      background-image: none;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 5px;
+    font-weight: font-weight(semi-bold);
+    text-decoration: none;
+    color: color(dark);
+    border-bottom: 3px solid transparent;
+    transition: all 300ms ease;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover, &:active, &:focus {
+      border-bottom: 3px solid color(accent);
+    }
+  }
+
+  @include min-width(bp(s)) {
+    font-size: em($font-default-size);
+
+    &__link {
+      margin-left: 20px;
+    }
+  }
+  @include min-width(bp(l)) {
+    &__link {
+      margin-left: 40px;
+    }
+  }
+  @include min-width(bp(xl)) {
+    &__link {
+      margin-left: 50px;
+    }
+  }
+}

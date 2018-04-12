@@ -1,0 +1,8 @@
+//media query for mobile view//
+@media screen and (max-width:760px){
+	.container{
+		&--policy{
+			width: 80%;
+		}
+	}
+}
