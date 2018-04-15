@@ -15,58 +15,58 @@
     background: none;
     padding: 0 1em 1em 1em;
 
-      &__logo {
+    &__logo {
       text-align: center;
 
-        &-img {
-          width: 125px;
-          margin-bottom: 1.5em;
-        }
-
-        h1 {
-          font-size: 1.4em;
-          color: #585858;
-          padding-bottom: .5em;
-        }
-
-        p {
-          padding: 5px 0px;
-          font-size: 0.9em;
-          color: #94969e;
-          line-height: 1.3;
-
-          a {
-            text-decoration: none;
-            color: #404040;
-          }
-        }
-          span{
-            color: #404040;
-            font-weight: 600;
-            a:hover{
-              border-bottom: 1px solid #404040;
-              transition: border 200ms ease;
-              padding-bottom: 2px;
-            }
-          }
+      &-img {
+        width: 125px;
+        margin-bottom: 1.5em;
       }
-      @include min-width(375) {
-        padding-top: 30px;
-      }
-      @include min-width(414) {
-        padding-top: 50px;
-      }
-      @include min-width(768) {
+
+      h1 {
         font-size: 1.4em;
+        color: #585858;
+        padding-bottom: .5em;
+      }
 
-        &__logo-img {
-          width: 160px;
+      p {
+        padding: 5px 0px;
+        font-size: 0.9em;
+        color: #94969e;
+        line-height: 1.3;
+
+        a {
+          text-decoration: none;
+          color: #404040;
         }
       }
-      @include min-width(bp(m)) {
-        font-size: 1.3em;
-        padding: 20px;
+      span{
+        color: #404040;
+        font-weight: 600;
+        a:hover{
+          border-bottom: 1px solid #404040;
+          transition: border 200ms ease;
+          padding-bottom: 2px;
+        }
       }
+    }
+    @include min-width(375) {
+      padding-top: 30px;
+    }
+    @include min-width(414) {
+      padding-top: 50px;
+    }
+    @include min-width(768) {
+      font-size: 1.4em;
+
+      &__logo-img {
+        width: 160px;
+      }
+    }
+    @include min-width(bp(m)) {
+      font-size: 1.3em;
+      padding: 20px;
+    }
   }
 
   .footer {
