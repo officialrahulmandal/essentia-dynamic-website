@@ -12,15 +12,16 @@
 @import 'base/global';
 @import 'base/links';
 @import 'base/typography';
+@import 'base/layout';
 
-@import "modules/header";
-@import "modules/hero";
-@import "modules/footer";
-@import "modules/btn";
-@import "modules/icons";
+@import 'modules/header';
+@import 'modules/hero';
+@import 'modules/footer';
+@import 'modules/btn';
+@import 'modules/icons';
 
-@import "pages/home";
-@import "pages/about";
-@import "pages/services";
-@import "pages/projects";
-@import "pages/contact";
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/services';
+@import 'pages/projects';
+@import 'pages/contact';

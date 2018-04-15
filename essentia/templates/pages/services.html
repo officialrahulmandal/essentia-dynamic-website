@@ -13,65 +13,65 @@
 </section>
 
 <!-- Our Mission Section -->
-<section class="container container_grey">
-    <div class="container_grey-text">
-        <p>We offer the full spectrum of services to help organisation work better. Everything from creating standards of excellance to training your people to work more effective ways, assessing how you're doing, and helping you perform even better in future.</p>
-    </div>
+<section class="container typeset">
+    <h2>What we Offer</h2>
+
+    <p>
+      We offer the full spectrum of services to help organisation work better. Everything from creating standards of excellance to training your people to work more effective ways, assessing how you're doing, and helping you perform even better in future.
+    </p>
 </section>
 
 <!-- What we  offer section -->
-<section class="container_white">
-    <div class="container_white-text">
-        <h2>What we Offer</h2>
+<section class="container container--offers">
 
-        <div class="container_white-text-service">
-            <img src="{% static 'images/icons/design.svg' %}">
-            <h3>Design and Architecture</h3>
-            <p>We design and architect your project as per your need that gives you a better product in less time.</p>
-        </div>
-
-        <div class="container_white-text-service">
-            <img src="{% static 'images/icons/website.svg' %}">
-            <h3>Web Apps</h3>
-            <p>We develop Web Apps using HTML5, CSS3, Django, Flask and more. Built to scale with your organisation.</p>
-        </div>
-
-        <div class="container_white-text-service">
-            <img src="{% static 'images/icons/dev.svg' %}">
-            <h3>Devops</h3>
-            <p>Our team of skilled, specialists will help you transform your culture, and sustain continuous flow.</p>
-        </div>
-
-        <div class="container_white-text-service">
-            <img src="{% static 'images/icons/consulting.svg' %}">
-            <h3>Consulting</h3>
-            <p>We are able to assist your organisation to change strategies which improve your bussiness.</p>
-        </div>
-        <div class="container_white-text-service">
-            <img src="{% static 'images/icons/support.svg' %}">
-            <h3>Support</h3>
-            <p>We know the importance of support by keeping that thing in mind we provide full support to your bussiness.</p>
-        </div>
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/design.svg' %}">
+        <h3>Design and Architecture</h3>
+        <p>We design and architect your project as per your need that gives you a better product in less time.</p>
     </div>
+
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/website.svg' %}">
+        <h3>Web Apps</h3>
+        <p>We develop Web Apps using HTML5, CSS3, Django, Flask and more. Built to scale with your organisation.</p>
+    </div>
+
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/dev.svg' %}">
+        <h3>Devops</h3>
+        <p>Our team of skilled, specialists will help you transform your culture, and sustain continuous flow.</p>
+    </div>
+
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/consulting.svg' %}">
+        <h3>Consulting</h3>
+        <p>We are able to assist your organisation to change strategies which improve your bussiness.</p>
+    </div>
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/support.svg' %}">
+        <h3>Support</h3>
+        <p>We know the importance of support by keeping that thing in mind we provide full support to your bussiness.</p>
+    </div>
+
 </section>
 
 <!-- End to End product management Section -->
-<section class="container container_grey typeset">
+<section class="container typeset">
     <h2>End to End Product Management</h2>
     <p>We do end to end product management from the inception of product idea by the customer to the design phase to development phase to deployment and support. We provide it using our experience and expertise in the industry.</p>
     <p>End-to-end software development services including custom web applications, Database solutions and web promotion services.</p>
-</section>
 
-<!-- What we  offer section -->
-<section class="container container_white typeset">
     <h2>Business Consulting</h2>
     <p>Our business consultants put emphasis on fully understanding your business model. Based on this knowledge we advise you the software solutions for your bussiness.</p>
-</section>
 
-<!-- What we  offer section -->
-<section class="container container_grey typeset">
     <h2>Automations</h2>
     <p>We thrive on automation. We survive by automating even the smallest of tasks that can be automated.</p>
     <p>Be it configuration of a server, or the build pipeline, or deployment process. Neither we, nor our clients can afford to have human error mess things up, so everything is automated down to the last bit.</p>
+</section>
+
+<section class="text-center">
+  <a href="{% url 'contact' %}" class="social-callout-twitter btn btn-outline">
+    Get in Touch
+  </a>
 </section>
 {% endblock content %}

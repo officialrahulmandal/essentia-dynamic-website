@@ -1,99 +1,21 @@
-.container_white{
-  &-project{
-    width: 70%;
-    margin: 0 auto;
-    padding: 0% 0% 3% 0%;
-    h3{
-      font-size: 1.8em;
-      padding-bottom: 2%;
-      text-align: center;
-    }
-    &--item{
-      width: 40%;
-      display: inline-block;
-      margin: 0% 0% 7% 7%;
-      position:relative;
-      img{
-        width: 100%;
-        display: block;
+.page-projects {
+
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects__item {
+    padding-top: 1em;
+
+    @include min-width(bp(m)) {
+      width: 50%;
+      &:nth-child(odd) {
+        padding-right: 1em;
       }
-    }
-  }
-}
-
-#overlay{
-  span{
-    background: rgba(67, 110, 238, 0.8);
-    bottom: 0;
-    display: inline-block;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    width: 100%;
-    height: 40%;
-    clip-path: polygon(0% 10%, 95% 10%, 100% 100%, 0% 100%);
-    opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    transition: opacity 500ms;
-    p{
-      position: absolute;
-      bottom: 30%;
-      left: 5%;
-      color: white;
-      font-weight: 600;
-      font-size: 1.6em;
-    }
-  }
-}
-
-#overlay:hover span {
-  opacity: 1;
-}
-
-//media query for tablet view//
-@media screen and (max-width:780px){
-  .container{
-    &_white{
-      &-project{
-        width: 80%;
-        &--item{
-          width: 45%;
-          margin: 7% 2%;
-        }
-      }
-    }
-  }
-
-  #overlay{
-    span{
-      p{
-        font-size: 1em;
-      }
-    }
-  }
-}
-
-//media query for mobile view//
-@media screen and (max-width:420px){
-  .container{
-    &_white{
-      &-project{
-        &--item{
-          width: 100%;
-          margin: 7% 0%;
-        }
-      }
-    }
-  }
-
-  #overlay{
-    span{
-      p{
-        font-size: 1.2em;
+      &:nth-child(event) {
+        padding-left: 1em;
       }
     }
   }
