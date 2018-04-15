@@ -1,46 +1,15 @@
 {% extends 'pages/base.html' %}
-{% load staticfiles i18n %}{% load webpack_static from webpack_loader %}
-{% load render_bundle from webpack_loader %}
+{% load staticfiles i18n %}
+
 {% block title %}{% trans 'Home' %} • {{ block.super }}{% endblock title %}
 {% block body_classes %}{{ block.super}} page-home {% endblock body_classes %}
 
 {% block content %}
-<nav class="nav">
-    <a class="nav__link" href="{% url 'home' %}">HOME</a>
-    <a class="nav__link" href="{% url 'about' %}">ABOUT</a>
-    <a class="nav__link" href="{% url 'services' %}">SERVICES</a>
-    <a class="nav__link" href="{% url 'projects' %}">PROJECTS</a>
-    <a class="nav__link" href="{% url 'contact' %}">CONTACT</a>
-</nav>
 <section class="hero">
-    <div class="hero__logo"><img class="hero__logo-img" src="img/ess-logo.png">
-        <h1>ESSENTIA SOFTSERV </h1>
-        <p>We architect, build and manage user-friendly scalable products for startups.</p>
-        <span><p>Got an Idea? <a href="contact.html">Get in touch</a></p></span>
-    </div>
+  <div class="hero__logo"><img class="hero__logo-img" src="{% static 'images/ess-logo.png' %}">
+    <h1>ESSENTIA SOFTSERV </h1>
+    <p>We architect, build and manage user-friendly scalable products for startups.</p>
+    <span><p>Got an Idea? <a href="{% url 'contact' %}">Get in touch</a></p></span>
+  </div>
 </section>
-<footer class="footer">
-    <div class="footer__upper">
-        <div class="footer__upper--text">
-            <img src="img/footer_img.png">
-            <h2>Essentia Softserv</h2>
-        </div>
-        <div class="footer__upper--nav">
-            <a href="{% url 'home' %}">HOME</a>
-            <a href="{% url 'about' %}">ABOUT</a>
-            <a href="{% url 'services' %}">SERVICES</a>
-            <a href="{% url 'projects' %}">PROJECTS</a>
-            <a href="{% url 'contact' %}">CONTACT</a>
-        </div>
-    </div>
-    <div class="footer__lower">
-        <div class="footer__lower__left">
-            <p>&copy; 2017 Essentia &#8226; <a href="https://www.iubenda.com/privacy-policy/8232799" title='Privacy Policy' target='blank'>Privacy</a></p>
-        </div>
-        <div class="footer__lower__center"></div>
-        <div class="footer__lower__right">
-            <p><a href="mailto:hello@essentiasoftserv.com">hello@essentiasoftserv.com</a></p>
-        </div>
-    </div>
-</footer>
 {% endblock content %}

@@ -1,0 +1,36 @@
+.page-services {
+  .container {
+    text-align: center;
+    padding: 1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--offers {
+      max-width: $base-width;
+    }
+  }
+
+  .container_white {
+    &-text{
+      &-service{
+        width: 270px;
+        display: inline-block;
+        text-align: center;
+        padding: 2% 2%;
+        img{
+          width: 30%;
+        }
+        h3{
+          font-size: 1em;
+          padding: 2% 0%;
+        }
+        p{
+          font-size: .9em;
+          line-height: 1.4;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

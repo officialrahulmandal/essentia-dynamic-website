@@ -1,0 +1,22 @@
+.page-projects {
+
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects__item {
+    padding-top: 1em;
+
+    @include min-width(bp(m)) {
+      width: 50%;
+      &:nth-child(odd) {
+        padding-right: 1em;
+      }
+      &:nth-child(event) {
+        padding-left: 1em;
+      }
+    }
+  }
+}

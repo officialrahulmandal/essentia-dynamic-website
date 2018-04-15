@@ -1,0 +1,27 @@
+.hero {
+  background-color: #e3e6eb;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  overflow-x: hidden;
+  max-width: 100%;
+
+  .section-text{
+    position: relative;
+    margin: auto;
+    top: 44%;
+    color: #fff;
+    text-align: center;
+    width:42%;
+    display:block;
+    h1{
+      font-weight: 600;
+    }
+    p{
+      padding: 5px 0px;
+      line-height: 150%;
+      font-weight: 600;
+    }
+  }
+}

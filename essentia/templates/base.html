@@ -1,47 +1,46 @@
-{% load staticfiles i18n %}{% load webpack_static from webpack_loader %}
-{% load render_bundle from webpack_loader %}{% load raven %}
-{% load staticfiles i18n %}<!DOCTYPE html>
-{% get_current_language as LANGUAGE_CODE %}
-<html lang="{{ LANGUAGE_CODE }}">
+<!doctype html>
+{% load staticfiles i18n raven %}
+{% load render_bundle from webpack_loader %}
+{% get_current_language as LANG_CODE %}
+<html lang="{{ LANG_CODE }}">
   <head>
+    {% block head %}
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
-    <title>{% block title %}Essentia{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Essentia Softserv{% endblock title %}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="preconnect" content="//fonts.googleapis.com">
+    <meta name="prerender" content="{% url 'contact' %}">
+    <meta name="prerender" content="{% url 'about' %}">
+    <meta name="theme-color" content="#4f6bb3">
     <meta name="version" content="{{ site_info.RELEASE_VERSION }}">
     <meta name="description" content="{% block meta_description %}{% endblock meta_description %}">
 
     {% if site_info.IS_RAVEN_INSTALLED %}
-    <script>Raven.config('{% sentry_public_dsn %}').install()</script>
+        <script>Raven.config('{% sentry_public_dsn %}').install()</script>
     {% endif %}
 
     {% block css %}
+    {# Put all extracted and css/scss from main.js in production here. #}
     {% render_bundle 'main' 'css'%}
     {% endblock css %}
+
     {% block head_extras %}{% endblock %}
+
+    {% endblock head %}
   </head>
-
   <body class="{% block body_classes %}{% endblock body_classes %} ">
-    <!--[if lt IE 8]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
-    {% block header %}
-    {% endblock header %}
+      {% block header %}{% include 'modules/_header.html' %}{% endblock %}
+      {% block content %}{% endblock %}
+      {% block footer %}{% include 'modules/_footer.html' %}{% endblock %}
 
-    {% block content %}
-      <p>Coming soon!</p>
-    {% endblock content %}
-
-    {% block footer %} {% endblock footer %}
-
-    <!-- Le javascript
-    ================================================== -->
-    {# Placed at the end of the document so the pages load faster #}
-    {% block js %}
-    <!-- place project specific Javascript in this file -->
-    {% render_bundle 'main' 'js' %}
-
-    {% endblock js %}
+      {% block js %}
+      {# Put all of javascript from webpack here. See fabfile.py -> 'watch' command. #}
+      {% render_bundle 'main' 'js' %}
+      {% endblock js %}
+      {% include 'modules/_analytics.html' %}
   </body>
 </html>

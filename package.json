@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Installs commandline tools needed by django-webpack-loader.",
   "engines": {
-    "node": "6.4.0"
+    "node": "6.11.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",

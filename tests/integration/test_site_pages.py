@@ -17,8 +17,12 @@ def test_root_txt_files(client):
 def test_landing_pages(client):
     # Test that these urls are rendered properly and doesn't required authorization
     urls = [
-        '/about/',
         '/',
+        '/about/',
+        '/contact/',
+        '/projects/',
+        '/services/',
+
     ]
     for url in urls:
         response = client.get(url)

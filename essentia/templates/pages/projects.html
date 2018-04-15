@@ -1,0 +1,55 @@
+{% extends 'pages/base.html' %}
+{% load i18n %}
+{%load staticfiles%}
+{% block title %}{% trans 'Projects' %} • {{ block.super }}{% endblock title %}
+{% block body_classes %}{{ block.super}} page-projects {% endblock body_classes %}
+{% block content %}
+<!-- Project section -->
+<section class="container text-center typeset">
+
+    <h2>Our projects</h2>
+
+    <p>We builds software so you can build better products. You can review some of the projects that were successfully implemented by Essentia Softserv. If you wish to recieve more detailed information on any of the provided examples or get quotation for your project, please feel free to contact us.</p>
+
+    <div class="projects__list">
+        <div class="projects__item">
+            <img src="{% static 'images/project/analytics_vidhya.jpg' %}" alt="">
+            <p>Analytics Vidhya / <small>Hackathon Platform for Data-Scientist</small></p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/blubyn.jpg' %}" alt="">
+            <p>Blubyn / <small>Consulting and Development</small></p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/strawberry.jpg' %}" alt="">
+            <p>Strawberry POS / <small>Backend Development</small> </p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/raw_mango.jpg' %}" alt="">
+            <p>Raw Mango / <small>Frontend and Backend in Django</small></p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/spoken_tutorial.jpg' %}" alt="">
+            <p>Spoken Tutorial Project / <small>Consulting</small></p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/ioda.jpg' %}" alt="">
+            <p>India Open Data Association / <small>Strategy, Development and Devops</small></p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/juxt.jpg' %}" alt="">
+            <p>Juxt Smart Mandate / <small>Consulting</small></p>
+        </div>
+        <div class="projects__item">
+            <img src="{% static 'images/project/elephono.jpg' %}" alt="">
+            <p>Elephono / <small>Strategy and Development</small></p>
+        </div>
+    </div>
+</section>
+
+<section class="text-center">
+  <a href="{% url 'contact' %}" class="social-callout-twitter btn btn-outline">
+    Contact Us
+  </a>
+</section>
+{% endblock content %}

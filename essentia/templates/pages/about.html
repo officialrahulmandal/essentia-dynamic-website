@@ -1,8 +1,55 @@
 {% extends 'pages/base.html' %}
-{% load staticfiles i18n %}{% load webpack_static from webpack_loader %}
-{% load render_bundle from webpack_loader %}
+{% load staticfiles i18n %}
+
 {% block title %}{% trans 'About' %} • {{ block.super }}{% endblock title %}
 {% block body_classes %}{{ block.super}} page-about {% endblock body_classes %}
+
 {% block content %}
-    <p>{% trans 'About page coming soon!' %}</p>
+<section class="section hero" style="background-image: url({% static 'images/bg/bg__about-us.jpg' %})">
+  <div class="section-text">
+    <h1>ESSENTIA</h1>
+    <p>Essentia is your technical co-pilot. We provide custom web, cloud, digital, desktop software development and consulting services to clients in every industry. Our clients range from hot startups to Fortune 500 companies.</p>
+  </div>
+</section>
+
+<!-- Our Mission Section -->
+<section class="container_grey typeset">
+  <div class="container_grey-text">
+    <h2>Essence of Essentia</h2>
+    <p>Appreciated and renowned in the market for providing quality services at an affordable price.</p>
+  </div>
+</section>
+
+<!-- Our Client Section -->
+<section class="client typeset">
+  <div class="client-text">
+    <h2>Our Clients</h2>
+    <p>Essentia pompously serves startups and enterprises that take pride in refining the society at large. We help them build their virtue using the experiences and exposures that we have had over years. We spiritedly solve their challenges and help them deliver their product in the market on time.</p>
+    <div class="client-logo">
+      <img src="{% static 'images/client/analytics-vidhya.png' %}"
+           alt="Analytics Vidhya">
+      <img src="{% static 'images/client/logo__strawberrypos.png' %}"
+           alt="Strawberry POS"
+           title="Strawberry POS <https://strawberrypos.com>">
+      <img src="{% static 'images/client/spoken-tutorial.png' %}"
+           alt="Spoken Tutorial">
+      <img src="{% static 'images/client/logo__blubyn.png' %}"
+           alt="Blubyn">
+      <img src="{% static 'images/client/raw-mango.png' %}"
+           alt="Raw Mango"
+           title="Raw Mango">
+      <img src="{% static 'images/client/ioda.png' %}"
+           alt="India Open Data Association">
+      <img src="{% static 'images/client/juxt.jpg' %}" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Get In touch Section -->
+<section class="text-center">
+  <a href="https://twitter.com/ESoftServ" class="social-callout-twitter btn btn-outline">
+    <span class="social-callout-twitter-logo"></span>Follow us on Twitter
+  </a>
+</section>
+
 {% endblock content %}

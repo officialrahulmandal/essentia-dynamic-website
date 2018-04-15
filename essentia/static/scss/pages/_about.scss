@@ -1,0 +1,311 @@
+$container-color : #F5F5F5;
+.page-about {
+
+  .hero{
+    .section-text{
+      position: relative;
+      margin: auto;
+      top: 44%;
+      color: #fff;
+      text-align: center;
+      width:42%;
+      display:block;
+      h1{
+        font-weight: 600;
+      }
+      p{
+        padding: 5px 0px;
+        line-height: 150%;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .container_grey{
+    background-color: $container-color;
+    &-text{
+      margin: 0 auto;
+      width: 60%;
+      text-align: center;
+      padding: 3% 0% 3% 0%;
+    }
+  }
+
+  .container_white {
+    &-text {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 3% 0% 3% 0%;
+
+      &-team {
+        width: 210px;
+        display: inline-block;
+        text-align: left;
+        padding: 1%;
+        img{
+          width: 95%;
+        }
+        h3{
+          font-size: 18px;
+          padding: 2% 0%;
+          font-weight: 600;
+        }
+        p{
+          padding: 1% 0%;
+          line-height: 1.4;
+          font-size: 1em;
+          span{
+
+          }
+        }
+      }
+    }
+  }
+
+  .client{
+    background-color: #FFF;
+    height: 100%;
+    &-text{
+      margin: 0 auto;
+      width: 60%;
+      top: 10%;
+      text-align: center;
+      padding: 3% 0%;
+    }
+    &-logo{
+      img{
+        margin: 20px;
+        height: 55px;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: all 0.5s ease;
+        &:hover{
+          -webkit-filter: grayscale(0%);
+          -moz-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+
+  //media query for mobile view//
+  @media screen and (max-width:780px){
+    .section{
+      &-text{
+        top:35%;
+        width: 80%;
+        h1{
+          font-size: 2em;
+        }
+        p{
+          font-weight: 400;
+          font-size: 1.4em;
+        }
+      }
+    }
+    .container_grey{
+      &-text{
+        width: 80%;
+        padding: 6% 0% 6% 0%;
+        h2{
+          font-size: 1.6em;
+          line-height:1.2;
+        }
+        p{
+          font-size: 1.2em;
+          line-height: 1.3;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .container_white{
+      &-text{
+        width: 80%;
+        padding: 6% 0% 6% 0%;
+        h2{
+          font-size: 1.6em;
+          line-height: 1.2;
+        }
+        p{
+          font-size: 1.2em;
+          line-height: 1.3;
+          font-weight: 300;
+        }
+        &-team{
+          width: 160px;
+          padding: 1%;
+          h3{
+            font-size: 1em;
+          }
+          p{
+            font-size: .9em;
+          }
+        }
+      }
+    }
+
+    .client{
+      &-text{
+        width: 80%;
+        padding: 6% 0% 6% 0%;
+        h2{
+          font-size: 1.6em;
+        }
+        p{
+          font-size: 1.2em;
+          line-height: 1.3;
+          font-weight: 300;
+        }
+      }
+      &-logo{
+        img{
+          margin: 10px;
+          height: 48px;
+        }
+      }
+    }
+  }
+
+  //media query for mobile view//
+  @media screen and (max-width:380px){
+    .section{
+      &-text{
+        top:25%;
+        width: 80%;
+        h1{
+         font-size: 1.4em;
+       }
+       p{
+        font-weight: 400;
+      }
+    }
+  }
+
+  .container_grey{
+    &-text{
+      width: 80%;
+      padding: 6% 0% 6% 0%;
+      h1{
+        font-size: 1.6em;
+        line-height:1.2;
+      }
+      p{
+        font-size: 1em;
+        line-height: 1.3;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .container_white{
+    &-text{
+      width: 80%;
+      padding: 6% 0% 6% 0%;
+      h2{
+        font-size: 1.6em;
+        line-height: 1.3;
+      }
+      p{
+        font-size: 1em;
+        line-height: 1.3;
+        font-weight: 300;
+      }
+      &-team{
+        width: 250px;
+        padding: 4%;
+      }
+    }
+  }
+
+  .client{
+    &-text{
+      width: 80%;
+      padding: 6% 0% 6% 0%;
+      p{
+        font-size: 1em;
+        line-height: 1.3;
+        font-weight: 300;
+      }
+    }
+    &-logo{
+      img{
+        margin: 10px;
+        height: 48px;
+      }
+    }
+  }
+  }
+
+  //media query for mobile view//
+  @media screen and (max-width:330px){
+    .section{
+      &-text{
+        top:25%;
+        width: 80%;
+        h1{
+          font-size: 1.2em;
+        }
+        p{
+          font-weight: 400;
+          font-size: 1em;
+        }
+      }
+    }
+    .container_grey{
+      &-text{
+        width: 80%;
+        padding: 6% 0% 6% 0%;
+        h1{
+          font-size: 1.6em;
+          line-height:1.2;
+        }
+        p{
+          font-size: 1em;
+          line-height: 1.3;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .container_white{
+      &-text{
+        width: 80%;
+        padding: 6% 0% 6% 0%;
+        h2{
+          font-size: 1.6em;
+          line-height: 1.3;
+        }
+        p{
+          font-size: 1em;
+          line-height: 1.3;
+          font-weight: 300;
+        }
+        &-team{
+          width: 250px;
+          padding: 4%;
+        }
+      }
+    }
+
+    .client{
+      &-text{
+        width: 80%;
+        padding: 6% 0% 6% 0%;
+        p{
+          font-size: 1em;
+          line-height: 1.3;
+          font-weight: 300;
+        }
+      }
+      &-logo{
+        img{
+          margin: 10px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
