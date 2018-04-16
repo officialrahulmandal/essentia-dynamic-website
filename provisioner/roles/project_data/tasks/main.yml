@@ -19,30 +19,26 @@
   become: false
   tags: ['deploy']
 
-- name: Install packages based on package.json.
-  npm: path={{ project_path }} global=no
-  become: true
-  when: webpack_enabled
-  tags: ['deploy']
-
 - name: copy env configuration
   template: src=env.env.j2 dest={{ project_path }}/.env force=no
   become: false
   tags: ['configure']
 
-- name: collect static
-  django_manage: command=collectstatic app_path={{ project_path }} virtualenv={{ venv_path }}
-  become: false
-  tags: ['deploy']
-  when: not webpack_enabled
-
 # Runs collectstatic with ignored webpack files
 - include: webpack.yml
   when: webpack_enabled
 
+- import_tasks: uwsgi-setup.yml
+
 - name: Run database migrations
   django_manage: command=migrate app_path={{ project_path }} virtualenv={{ venv_path }}
   become: false
+  tags: ['deploy']
+
+- name: reload uwsgi processes
+  command: uwsgi --reload {{ uwsgi_pid_file }}
+  become: true
+  when: not uwsgiconf.changed
   tags: ['deploy']
 
 - name: Build documentation for "/docs" url.
@@ -52,10 +48,3 @@
   become: false
   tags: ['deploy', 'documentation']
 
-- import_tasks: uwsgi-setup.yml
-
-- name: reload uwsgi processes
-  command: uwsgi --reload {{ uwsgi_pid_file }}
-  become: true
-  when: not uwsgiconf.changed
-  tags: ['deploy']

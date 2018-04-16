@@ -18,6 +18,12 @@
     pkg: nodejs
     state: present
 
+- name: Install packages based on package.json.
+  npm: path={{ project_path }} global=no
+  become: false
+  when: webpack_enabled
+  tags: ['deploy']
+
 - name: make sure webpack stats file exists
   file:
     path: "{{ project_path }}/webpack-stats.json"
@@ -26,13 +32,16 @@
     group: "{{uwsgi_group}}"
 
 - name: Run build webpack
-  command: "{{ webpack_path }} --config {{ webpack_config }} --progress --colors"
+  command: "{{ webpack_path }} --config {{ webpack_config }}"
   become: false
   tags: ['deploy']
   args:
    chdir: "{{ project_path }}"
 
 - name: collect static
-  django_manage: command="collectstatic -i js -i css -i server.js -i webpack.base.config.js -i webpack.dev.config.js -i webpack.prod.config.js" app_path={{ project_path }} virtualenv={{ venv_path }}
+  django_manage:
+    command: "collectstatic --no-input -i js -i css -i server.js -i webpack.base.config.js -i webpack.dev.config.js -i webpack.prod.config.js"
+    app_path: "{{ project_path }}"
+    virtualenv: "{{ venv_path }}"
   become: false
   tags: ['deploy']

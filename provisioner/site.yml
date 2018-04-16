@@ -26,9 +26,9 @@
   roles:
     - common
     - nginx
+    - redis
     - postgresql
     - project_data
-    # - redis
     # - celery
 
 #= QA
