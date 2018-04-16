@@ -29,7 +29,4 @@ base_ubuntu:
       - libfreetype6-dev
       - liblcms2-dev
       - postgresql-client
-      - libpq-dev
-      - postgis
       - ca-certificates
-

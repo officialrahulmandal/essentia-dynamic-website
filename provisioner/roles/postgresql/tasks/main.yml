@@ -1,4 +1,12 @@
 ---
+- apt_repository:
+    repo: deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+    state: present
+
+- name: Add an apt key by url from postgresql
+  apt_key:
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
 - name: Update apt-cache if not already ran
   shell: apt update
   become: yes
@@ -7,16 +15,17 @@
 - name: install postgres packages for Ubuntu
   apt:
     pkg: "{{ item }}"
-    state: installed
+    state: present
   with_items:
-    - postgresql
+    - postgresql-9.6
+    - libpq-dev
     - postgresql-contrib
     - python-psycopg2
 
 - name: install postgis packages for Ubuntu
   apt:
     pkg: "postgis"
-    state: installed
+    state: present
   when: pg_gis
 
 - name: setup database

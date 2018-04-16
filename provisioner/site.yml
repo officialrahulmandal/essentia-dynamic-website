@@ -11,7 +11,7 @@
     - nginx
     - postgresql
     - project_data
-    # - redis
+    - redis
     # - celery
 
 #= Dev
