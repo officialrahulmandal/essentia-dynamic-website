@@ -17,7 +17,7 @@ pg_password=vagrant
 domain_name=vagrant.essentia.com
 
 [dev]
-dev.essentia.com
+staging.essentiasoftserv.com
 
 [dev:vars]
 vm=0
@@ -30,7 +30,7 @@ use_letsencrypt=True
 letsencrypt_email=devops@essentiasoftserv.com
 django_requirements_file=requirements.txt
 django_settings="settings.production"
-domain_name=dev.essentia.com
+domain_name=staging.essentiasoftserv.com
 
 
 [qa]
