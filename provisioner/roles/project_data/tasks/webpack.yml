@@ -7,7 +7,7 @@
     group: "{{uwsgi_group}}"
 
 - name: Run build webpack
-  command: {{ webpack_path }} --config {{ webpack_config }} --progress --colors
+  command: "{{ webpack_path }} --config {{ webpack_config }} --progress --colors"
   become: false
   tags: ['deploy']
   args:
