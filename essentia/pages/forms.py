@@ -10,8 +10,3 @@ class CareersForm(forms.ModelForm):
                   'resume', 'linked_in', 'github', 'stack_overflow')
 
 
-class ContactUs(forms.Form):
-    name = forms.CharField()
-    email = forms.CharField()
-    contact_no = forms.CharField()
-    message = forms.CharField()
