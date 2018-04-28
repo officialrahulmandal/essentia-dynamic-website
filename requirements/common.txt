@@ -49,3 +49,7 @@ django-mail-templated==2.6.5
 # WEBPACK
 # -------------------------------------
 django-webpack-loader==0.6.0
+
+# Django Crispy Forms
+# -------------------------------------
+django-crispy-forms==1.7.2
