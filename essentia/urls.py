@@ -10,6 +10,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
+from .pages.views import CareersPage
 
 from . import routers
 from .base import views as base_views
@@ -26,6 +27,7 @@ urlpatterns = [
     url(r'^services/$', TemplateView.as_view(template_name='pages/services.html'), name='services'),
     url(r'^projects/$', TemplateView.as_view(template_name='pages/projects.html'), name='projects'),
     url(r'^contact/$', TemplateView.as_view(template_name='pages/contact.html'), name='contact'),
+    url(r'^careers/$', CareersPage.as_view(), name='careers'),
     # Your stuff: custom urls go here
 ]
 

@@ -1,0 +1,49 @@
+{% extends 'pages/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n staticfiles %}
+
+{% block title %}{% trans 'Careers' %} • {{ block.super }}{% endblock title %}
+{% block body_classes %}{{ block.super}} page-careers {% endblock body_classes %}
+
+{% block content %}
+<section class="container typeset">
+    <h2>Why Essentia</h2>
+
+    <p>
+      Find a job you love, Create the future you want
+    </p>
+</section>
+<section class="container container--offers">
+
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/love-u-do.png' %}">
+        <h3>Do What You Love</h3>
+        <p>---</p>
+    </div>
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/work-from-home.png' %}">
+        <h3>Work from Home</h3>
+        <p>---</p>
+    </div>
+    <div class="container_white-text-service">
+        <img src="{% static 'images/icons/be-who-u-are.jpg' %}">
+        <h3>Be who you are</h3>
+        <p>---</p>
+    </div>
+</section>
+<section class="text-center">
+	<div class="col-md-1">
+    <h1 class='section_header'>Careers</h1>
+    <div class='form_section'>
+        <form action="" method="POST" class="post-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- Django will take care of spiting the form. -->
+            {{ form|crispy }}
+            <button class="button" type="submit" >Apply</button>
+        </form>
+    </div>
+</div>
+</section>
+
+
+{% endblock content %}

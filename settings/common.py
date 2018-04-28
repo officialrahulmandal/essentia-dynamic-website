@@ -30,6 +30,8 @@ INSTALLED_APPS = (
 
     'essentia.base',
     'essentia.users',
+    'essentia.pages',
+    'crispy_forms',
 
     'rest_framework',  # http://www.django-rest-framework.org/
     'rest_framework_swagger',
